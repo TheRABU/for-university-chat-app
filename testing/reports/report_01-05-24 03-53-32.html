@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maisha's unit test</title>
+    <meta name="generator" content="HTMLTestRunner 1.1.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+    <style>
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+<div class='heading'>
+    <h1 style="margin-left:1ex;">Maisha's unit test</h1>
+    
+    <p class='attribute'><strong>Start Time : </strong> 2024-05-01 15:53:32</p>
+    
+    <p class='attribute'><strong>Duration : </strong> 0:00:11.559043</p>
+    
+    <p class='attribute'><strong>Status : </strong> Error 1</p>
+    
+    <p class='attribute'><strong>Description : </strong> Test report generation using HTMLTestRunner-rv</p>
+    
+    <p class='attribute'><strong>Tested By : </strong> Unknown</p>
+    
+</div>
+<div>
+    <p id='show_detail_line'><b>Show</b>
+        <button><a href='javascript:showCase(0)' style="color:#660066;">Summary</a></button>
+        <button><a href='javascript:showCase(1)' style="color:#660066;">Failed</a></button>
+        <button><a href='javascript:showCase(2)' style="color:#660066;">Passed</a></button>
+        <button><a href='javascript:showCase(3)' style="color:#660066;">All</a></button>
+    </p>
+    <table id='result_table'>
+        <colgroup>
+            <col align='left'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+        </colgroup>
+        <tr id='header_row'>
+            <td>Test Group/Test case</td>
+            <td>Count</td>
+            <td>Pass</td>
+            <td>Fail</td>
+            <td>Error</td>
+            <td>View</td>
+        </tr>
+        
+        <tr class='errorClass' style="font-weight:bold;color:white;">
+            <td><a href="javascript:showClassDetail('c1','1')">ChatifyUnitTest</a></td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>
+                <button><a href="javascript:showClassDetail('c1','1')"
+                           style="color:#660066;">Detail</a></button>
+            </td>
+        </tr>
+            
+            <tr id="ft1.1" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.1')">test_logout: Check if that logout is working properly.</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.1')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.1' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.1').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre></pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "C:\Users\Mashu\Desktop\selenium-testing\test.py", line 147, in test_logout
+    logout_button = self.browser.find_element(By.XPATH, '/html/body/div/div/div[1]/main/div[1]/div[3]/svg')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python312\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/div[1]/main/div[1]/div[3]/svg"}
+  (Session info: chrome=124.0.6367.119); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7FC121502+60802]
+	(No symbol) [0x00007FF7FC09AC02]
+	(No symbol) [0x00007FF7FBF57CE4]
+	(No symbol) [0x00007FF7FBFA6D4D]
+	(No symbol) [0x00007FF7FBFA6E1C]
+	(No symbol) [0x00007FF7FBFECE37]
+	(No symbol) [0x00007FF7FBFCABBF]
+	(No symbol) [0x00007FF7FBFEA224]
+	(No symbol) [0x00007FF7FBFCA923]
+	(No symbol) [0x00007FF7FBF98FEC]
+	(No symbol) [0x00007FF7FBF99C21]
+	GetHandleVerifier [0x00007FF7FC42411D+3217821]
+	GetHandleVerifier [0x00007FF7FC4660B7+3488055]
+	GetHandleVerifier [0x00007FF7FC45F03F+3459263]
+	GetHandleVerifier [0x00007FF7FC1DB846+823494]
+	(No symbol) [0x00007FF7FC0A5F9F]
+	(No symbol) [0x00007FF7FC0A0EC4]
+	(No symbol) [0x00007FF7FC0A1052]
+	(No symbol) [0x00007FF7FC0918A4]
+	BaseThreadInitThunk [0x00007FFADB867344+20]
+	RtlUserThreadStart [0x00007FFADC9626B1+33]
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+        
+
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<br><br>
+<div id='ending'><b>Time Elapsed: </b>0:00:11.559043</div>
+</body>
+</html>
