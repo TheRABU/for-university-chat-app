@@ -39,3 +39,12 @@ class ChatifyUnitTest(unittest.TestCase):
         signup_button = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[6]/button')
         assert signup_button is not None, "SignUp Page could not be accessed via the Nav-Bar"
         # assert "Sign Up Chat-i-Fy" in self.browser.page_source, "Signup Page could not be accessed via the Nav-Bar"
+
+    def test4_navbar_aboutus(self):
+        """Check if Login Page is loaded properly via the Nav-Bar."""
+        self.browser.get('http://localhost:5000')
+        sleep(3)
+        element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[1]/div[1]/div[2]/ul/li[3]/a')
+        element.click()
+        sleep(3)
+        assert "Want to know more about the members?" in self.browser.page_source, "About Us Page could not be accessed via the Nav-Bar"
