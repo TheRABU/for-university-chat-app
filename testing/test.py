@@ -134,3 +134,34 @@ class ChatifyUnitTest(unittest.TestCase):
         sleep(2)
         assert message in self.browser.page_source, "Instant messaging is not working properly."
         sleep(5)
+
+    def test8_logout(self):
+        """Check if that logout is working properly."""
+        self.browser.get("http://localhost:5000/login")
+        username_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[1]/input')
+        password1_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[2]/input')
+        login_button = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[3]/button')
+        
+        for char in "testuser":
+            username_input_element.send_keys(char)
+            sleep(0.2)
+
+        for char in "123456":
+            password1_input_element.send_keys(char)
+            sleep(0.2)
+        sleep(2)
+        login_button.click()
+        sleep(3)
+
+        assert "Select a chat to start messaging" in self.browser.page_source, "Login is not working properly"
+
+        logout_button = self.browser.find_element(By.CSS_SELECTOR, '.text-black')
+
+        sleep(2)
+
+        logout_button.click()
+
+        sleep(2)
+        
+        assert self.browser.current_url == "http://localhost:5000/login"
+        sleep(1)
