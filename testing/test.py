@@ -14,7 +14,7 @@ def generateMessage():
 
 class ChatifyUnitTest(unittest.TestCase):
     def setUp(self):
-        self.browser = webdriver.Chrome(service=Service(r"C:\Users\Mashu\Desktop\selenium-testing\chromedriver.exe"))
+        self.browser = webdriver.Chrome(service=Service(r".\chromedriver.exe"))
         self.addCleanup(self.browser.quit)
         
     def test1_homepage(self):
