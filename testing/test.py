@@ -98,3 +98,39 @@ class ChatifyUnitTest(unittest.TestCase):
         sleep(3)
 
         assert "Select a chat to start messaging" in self.browser.page_source, "Login is not working properly"
+
+    def test7_chat(self):
+        """Check if instant messagning is working or not."""
+        self.browser.get("http://localhost:5000/login")
+        username_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[1]/input')
+        password1_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[2]/input')
+        login_button = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[3]/button')
+        
+        for char in "testuser":
+            username_input_element.send_keys(char)
+            sleep(0.2)
+
+        for char in "123456":
+            password1_input_element.send_keys(char)
+            sleep(0.2)
+        sleep(2)
+        login_button.click()
+        sleep(3)
+
+        other_user = self.browser.find_element(By.XPATH, f"//*[contains(text(), 'testreg')]")
+        other_user.click()
+        sleep(5)
+
+        message_input = self.browser.find_element(By.XPATH, f"/html/body/div/div/div[1]/main/div[2]/form/div/input")
+
+        message = generateMessage()
+        for char in message:
+            message_input.send_keys(char)
+            sleep(0.1)
+        
+        message_send_button = self.browser.find_element(By.XPATH, f"/html/body/div/div/div[1]/main/div[2]/form/div/button")
+        sleep(2)
+        message_send_button.click()
+        sleep(2)
+        assert message in self.browser.page_source, "Instant messaging is not working properly."
+        sleep(5)
