@@ -165,3 +165,13 @@ class ChatifyUnitTest(unittest.TestCase):
         
         assert self.browser.current_url == "http://localhost:5000/login"
         sleep(1)
+
+        
+if __name__ == '__main__':
+    # unittest.main(verbosity=2)
+    my_test_suite = unittest.TestSuite()
+    my_test_suite.addTest(unittest.makeSuite(ChatifyUnitTest))
+    runner = HTMLTestRunner(
+        title='''Chatify App Test''', open_in_browser=True,
+        tested_by="Maisha Zaman")
+    runner.run(my_test_suite)
