@@ -48,3 +48,34 @@ class ChatifyUnitTest(unittest.TestCase):
         element.click()
         sleep(3)
         assert "Want to know more about the members?" in self.browser.page_source, "About Us Page could not be accessed via the Nav-Bar"
+        
+    def test5_signup(self):
+        """Check if that signup page is working properly with correct input."""
+        self.browser.get("http://localhost:5000/signup")
+        name_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[1]/input')
+        username_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[2]/input')
+        password1_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[3]/input')
+        password2_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[4]/input')
+        check_box = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[5]/div[1]/label/input')
+        signup_button = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[6]/button')
+
+        for char in "testuser":
+            name_input_element.send_keys(char)
+            sleep(0.2)
+
+        for char in "testuser":
+            username_input_element.send_keys(char)
+            sleep(0.2)
+
+        for char in "123456":
+            password1_input_element.send_keys(char)
+            sleep(0.2)
+        for char in "123456":
+            password2_input_element.send_keys(char)
+            sleep(0.2)
+        check_box.click()
+        sleep(2)
+        signup_button.click()
+        sleep(1)
+        assert "Username already exists" in self.browser.page_source, "Sigup is not working properly"
+
