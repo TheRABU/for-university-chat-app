@@ -48,7 +48,7 @@ class ChatifyUnitTest(unittest.TestCase):
         element.click()
         sleep(3)
         assert "Want to know more about the members?" in self.browser.page_source, "About Us Page could not be accessed via the Nav-Bar"
-        
+
     def test5_signup(self):
         """Check if that signup page is working properly with correct input."""
         self.browser.get("http://localhost:5000/signup")
@@ -79,3 +79,22 @@ class ChatifyUnitTest(unittest.TestCase):
         sleep(1)
         assert "Username already exists" in self.browser.page_source, "Sigup is not working properly"
 
+    def test6_login(self):
+        """Check if that login page is working properly with correct input."""
+        self.browser.get("http://localhost:5000/login")
+        username_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[1]/input')
+        password1_input_element = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[2]/input')
+        login_button = self.browser.find_element(By.XPATH, '/html/body/div/div/div[2]/div/form/div[3]/button')
+        
+        for char in "testuser":
+            username_input_element.send_keys(char)
+            sleep(0.2)
+
+        for char in "123456":
+            password1_input_element.send_keys(char)
+            sleep(0.2)
+        sleep(2)
+        login_button.click()
+        sleep(3)
+
+        assert "Select a chat to start messaging" in self.browser.page_source, "Login is not working properly"
