@@ -6,6 +6,12 @@ from time import sleep
 from HTMLTestRunner.runner import HTMLTestRunner
 import unittest
 
+
+def generateMessage():
+    import datetime
+    return "Test Message Generated at " + str(datetime.datetime.now())
+
+
 class ChatifyUnitTest(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome(service=Service(r"C:\Users\Mashu\Desktop\selenium-testing\chromedriver.exe"))
