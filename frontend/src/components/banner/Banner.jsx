@@ -1,4 +1,5 @@
-const Banner = () => {
+const Banner = () => 
+  {
   return (
     <div
       className="hero min-h-screen"
@@ -14,9 +15,9 @@ const Banner = () => {
           <p className="mb-5">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            an id nisi.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary">Let's get Started!</button>
         </div>
       </div>
     </div>
