@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-const Nav = () => {
+const Nav = () => 
+  {
   const links = (
     <>
       <li>
