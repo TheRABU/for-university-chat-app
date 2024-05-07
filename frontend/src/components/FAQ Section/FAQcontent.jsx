@@ -11,22 +11,22 @@ const FAQcontent = () => {
         <div className="space-y-4">
           <details className="w-full border rounded-lg">
             <summary className="px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
-              How the users are talking with each other in real time?
+              How are the users talking to each other in real-time?
             </summary>
             <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
-              By using Socket.IO . Socket.IO is an event-driven library for
+              By using Socket.IO. Socket.IO is an event-driven library for
               real-time web applications. It enables real-time, bi-directional
               communication between web clients and servers. It consists of two
-              components: a client, and a server. Both components have a nearly
+              components: a client, and a server. Both components have nearly
               identical API.
             </p>
           </details>
           <details className="w-full border rounded-lg">
             <summary className="px-4 py-6 focus:outline-none focus-visible:dark:ring-violet-600">
-              Why did you even created this app?
+              Why did you even create this app?
             </summary>
             <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-600">
-              Because of it was a fun way to explore new technologies
+              Because it was a fun way to explore new technologies.
             </p>
           </details>
           <details className="w-full border rounded-lg">
